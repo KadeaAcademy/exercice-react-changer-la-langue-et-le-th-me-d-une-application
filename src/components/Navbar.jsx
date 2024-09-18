@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, Sun, Moon } from "react-feather";
-import navbarLogo from "../assets/image/navbar-logo.svg";
+import navbarLogo from "../assets/image/batman-5.svg";
 
 const Navbar = () => {
   const [navbarOpen, SetNavbarOpen] = useState(false);
@@ -12,11 +12,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={"flex-wrap lg:flex items-center justify-between mb-20 lg:mb-40"}
+      className={
+        "flex-wrap lg:flex items-center justify-between mb-20 lg:mb-40"
+      }
     >
       <div className="flex items-center justify-between mb-10 lg:mb-0">
         <img src={navbarLogo} alt="Logo" />
-  
+
         <div className="flex items-center">
           <button
             className="flex items-center justify-center border border-red-500 w-10 h-10 text-red-500 rounded-md outline-none lg:hidden ml-auto"
@@ -28,24 +30,24 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-  
+
       <ul
         className={`${
           navbarOpen ? "flex" : "hidden"
         } lg:flex flex-col lg:flex-row lg:items-center lg:space-x-20`}
       >
         <li className="font-medium text-gray-500 text-lg hover:text-red-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
-          <a href="#">Services</a>
+          <a href="#services">Services</a>
         </li>
-  
+
         <li className="font-medium text-gray-500 text-lg hover:text-red-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
-          <a href="#">Works</a>
+          <a href="#works">Réalisations</a>
         </li>
-  
+
         <li className="font-medium text-gray-500 text-lg hover:text-red-300 transition ease-in-out duration-300 mb-5 lg:mb-0">
-          <a href="#">Blog</a>
+          <a href="#contact">Contact</a>
         </li>
-  
+
         {/* Theme Selector */}
         <li className="flex items-center">
           <button
@@ -59,7 +61,7 @@ const Navbar = () => {
             )}
           </button>
         </li>
-  
+
         {/* Language Selector */}
         <li className="flex items-center">
           <select
@@ -74,7 +76,6 @@ const Navbar = () => {
       </ul>
     </nav>
   );
-  
 };
 
 export default Navbar;
